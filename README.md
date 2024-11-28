@@ -40,31 +40,33 @@ The dataset consists of 9,000 entries with 17 features, including:
 4 - No adoption after 100 days of being listed.
 
 
-## Methods 
-### 1. Data Exploration and Preprocessing
-#### Structured Data: Handled outliers, encoded categorical variables, and scaled numerical features.
-#### Text Data:
-a. Cleaning (removing punctuation, stopwords, and special characters).
-b. Lemmatization and vectorization using TF-IDF.
-#### Image Data:
-Feature extraction using ResNet50 pre-trained on ImageNet.
+## Methods
 
-### 2. Feature Engineering
-Created new features, including:
-a. Number of known colors (ColorsNum).
-b. Categorization of pets into age groups (e.g., kitten, senior).
-c. Encoded medical attributes (Vaccinated, Dewormed) with distinct "Unknown" categories.
+1. **Data Exploration and Preprocessing**  
+   - **Structured Data:**  
+     Handled outliers, encoded categorical variables, and scaled numerical features.  
+   - **Text Data:**  
+     a. Cleaning (removing punctuation, stopwords, and special characters).  
+     b. Lemmatization and vectorization using TF-IDF.  
+   - **Image Data:**  
+     Feature extraction using ResNet50 pre-trained on ImageNet.  
 
-### 3. Modeling and Evaluation
-#### Machine Learning Models:
-a. Trained models like Random Forest, LightGBM, XGBoost, and ensemble classifiers.
-b. Hypeparameters tuning to find the best models that give the best predictions
-c. Evaluated using Quadratic Weighted Kappa Score (best score: 0.41) and F1-score.
+2. **Feature Engineering**  
+   Created new features, including:  
+   a. Number of known colors (ColorsNum).  
+   b. Categorization of pets into age groups (e.g., kitten, senior).  
+   c. Encoded medical attributes (Vaccinated, Dewormed) with distinct "Unknown" categories.  
 
-#### Deep Learning Model:
-a. Built a multi-input neural network combining CNNs for images, LSTMs for text, and dense layers for structured data.
-b. Use Keras Tuner to find the best hyperparameters.
-c. The multi-input neural network model yielded a Quadratic Kappa Score of 0.31
+3. **Modeling and Evaluation**  
+   - **Machine Learning Models:**  
+     a. Trained models like Random Forest, LightGBM, XGBoost, and ensemble classifiers.  
+     b. Tuned hyperparameters to find the best models for optimal predictions.  
+     c. Evaluated using Quadratic Weighted Kappa Score (best score: 0.41) and F1-score.  
+   - **Deep Learning Model:**  
+     a. Built a multi-input neural network combining CNNs for images, LSTMs for text, and dense layers for structured data.  
+     b. Used Keras Tuner to find the best hyperparameters.  
+     c. The multi-input neural network model yielded a Quadratic Kappa Score of 0.31.  
+
 
 ![Screenshot 2024-11-27 172540](https://github.com/user-attachments/assets/0e7bb96a-8a89-4c57-807c-615a3191d54e)
 
